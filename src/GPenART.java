@@ -1,18 +1,18 @@
 /**
- * Gpen.java
+ * GPenART.java
  * @author sn0w
  * 09/23/2014
- * Draws a Image using only the Gpen
+ * Draws a Image using only the GPen
  */
 
 //
 
 //Imports for the program.
-import acm.graphics.*;
+import acm.graphics.GPen;
 import acm.program.GraphicsProgram;
 import java.awt.Color;
 
-public class GPen extends GraphicsProgram 
+public class GPenART extends GraphicsProgram 
 {
 	public void run()
 	{
@@ -24,6 +24,7 @@ public class GPen extends GraphicsProgram
 		
 		//Start the drawing
 		pen.drawLine(50, 50);
+		pen.hidePen();
 		
 	}
 
