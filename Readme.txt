@@ -1,1 +1,28 @@
-This program will run and make a drawing on a canvas for the user to see. The program makes use of the acm.jar that is provided under their own license agreement. 
+/*
+ * GPenART.java
+ */
+
+// ***********************************************************************************************
+// * Copyright (c) 2014 by Garrett J. Beasley													 *
+// *																							 *
+// * 
+// *
+// *
+// *
+// *
+// *
+// *
+// *
+// *
+// *
+// *
+// *
+// *
+// *
+// *
+// *
+// *
+// *
+// *
+// *
+// ***********************************************************************************************

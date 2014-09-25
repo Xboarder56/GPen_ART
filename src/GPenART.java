@@ -8,7 +8,7 @@
 //
 
 //Imports for the program.
-import acm.graphics.GPen;
+import acm.graphics.*;
 import acm.program.GraphicsProgram;
 import java.awt.Color;
 
@@ -21,78 +21,121 @@ public class GPenART extends GraphicsProgram
 		int startY = 0;
 		int windowX = 1336;
 		int windowY = 768;
-		int flagsep = 70;
+		int flagSep = 70;
+		int starBox = 450;
 		
+		//Sets the size of the window for the program
 		 setSize(windowX, windowY);
 				
-		//Creates the Pen at location 25, 25 and addes to the canvas.
+		//Creates the Pen at location 0, 0 and addes to the canvas.
 		GPen pen = new GPen();
 		add(pen);
 		pen.setLocation(startX, startY);
 		pen.showPen();
 		
 		//Start drawing the edges/layout of the flag
-		pen.drawLine(0, 768);
-		pen.drawLine(1336, 0);
-		pen.drawLine(0, -768);
-		pen.drawLine(-1336, 0);
+		pen.drawLine(startX, windowY);
+		pen.drawLine(windowX, startY);
+		pen.drawLine(startX, -windowY);
+		pen.drawLine(-windowX, startY);
 		
 		//Strip #1
-		pen.setLocation(startX, (windowY-flagsep));
-		pen.drawLine(windowX, 0);
+		pen.setFillColor(Color.RED);
+		pen.startFilledRegion();
+		pen.setLocation(startX, windowY);
+		pen.drawLine(startX, -(flagSep));
+		pen.drawLine(windowX, startY);
+		pen.drawLine(startX, flagSep);
+		pen.endFilledRegion();
 		
 		//Strip #2
-		pen.setLocation(startX, (windowY-(flagsep*2)));
-		pen.drawLine(windowX, 0);
+		pen.setFillColor(Color.RED);
+		pen.startFilledRegion();
+		pen.setLocation(startX, (windowY-flagSep*2));
+		pen.drawLine(startX, -(flagSep));
+		pen.drawLine(windowX, startY);
+		pen.drawLine(startX, flagSep);
+		pen.endFilledRegion();
 		
 		//Strip #3
-		pen.setLocation(startX, (windowY-(flagsep*3)));
-		pen.drawLine(windowX, 0);
+		pen.setFillColor(Color.RED);
+		pen.startFilledRegion();
+		pen.setLocation(startX, (windowY-flagSep*4));
+		pen.drawLine(startX, -(flagSep));
+		pen.drawLine(windowX, startY);
+		pen.drawLine(startX, flagSep);
+		pen.endFilledRegion();
 		
 		//Strip #4
-		pen.setLocation(startX, (windowY-(flagsep*4)));
-		pen.drawLine(windowX, 0);
+		pen.setFillColor(Color.RED);
+		pen.startFilledRegion();
+		pen.setLocation(startX+starBox, (windowY-flagSep*6));
+		pen.drawLine(startX, -(flagSep));
+		pen.drawLine(windowX-starBox, startY);
+		pen.drawLine(startX, flagSep);
+		pen.endFilledRegion();
 		
 		//Strip #5
-		pen.setLocation(startX, (windowY-(flagsep*5)));
-		pen.drawLine(windowX, 0);
+		pen.setFillColor(Color.RED);
+		pen.startFilledRegion();
+		pen.setLocation(startX+starBox, (windowY-flagSep*8));
+		pen.drawLine(startX, -(flagSep));
+		pen.drawLine(windowX-starBox, startY);
+		pen.drawLine(startX, flagSep);
+		pen.endFilledRegion();
 		
 		//Strip #6
-		pen.setLocation(startX, (windowY-(flagsep*6)));
-		pen.drawLine(windowX, 0);
-		
-		//Strip #7
-		pen.setLocation(startX+450, (windowY-(flagsep*7)));
-		pen.drawLine(windowX, 0);
-		
-		//Strip #8
-		pen.setLocation(startX+450, (windowY-(flagsep*8)));
-		pen.drawLine(windowX, 0);
-		
-		//Strip #9
-		pen.setLocation(startX+450, (windowY-(flagsep*9)));
-		pen.drawLine(windowX, 0);
-		
-		//Strip #10
-		pen.setLocation(startX+450, (windowY-(flagsep*10)));
-		pen.drawLine(windowX, 0);
-		
-		//Strip #11
-		pen.setLocation(startX+450, (windowY-(flagsep*11)));
-		pen.drawLine(windowX, 0);
+		pen.setFillColor(Color.RED);
+		pen.startFilledRegion();
+		pen.setLocation(startX+starBox, (windowY-flagSep*10));
+		pen.drawLine(startX, -(flagSep));
+		pen.drawLine(windowX-starBox, startY);
+		pen.drawLine(startX, flagSep);
+		pen.endFilledRegion();
 		
 		//StarBox
-		pen.setLocation(startX+450, startY);
+		pen.setFillColor(Color.BLUE);
+		pen.startFilledRegion();
+		pen.setLocation(startX, startY);
 		pen.drawLine(startX, 348);
+		pen.drawLine(starBox, startY);
+		pen.drawLine(startX, -348);
+		pen.endFilledRegion();
 		
+		//Tri #1 (BASE RIGHT)
+		pen.setFillColor(Color.WHITE);
+		pen.startFilledRegion();
+		pen.setLocation(350, 275);
+		pen.drawLine(-50, -80);
+		pen.drawLine(-45, 42);
+		pen.endFilledRegion();
 		
+		//Tri #2 (BASE LEFT)
+		pen.setFillColor(Color.WHITE);
+		pen.startFilledRegion();
+		pen.setLocation(195, 230);
+		pen.drawLine(-50, -40);
+		pen.drawLine(-80, 90);
+		pen.endFilledRegion();
+
+		//Tri #3 (BASE MIDDLE)
+		pen.setFillColor(Color.WHITE);
+		pen.startFilledRegion();
+		pen.setLocation(100, 150);
+		pen.drawLine(250, 0);
+		pen.drawLine(-125, 115);
+		pen.endFilledRegion();
 		
+		//Tri #4 (BASE TOP)
+		pen.setFillColor(Color.WHITE);
+		pen.startFilledRegion();
+		pen.setLocation(185, 150);
+		pen.drawLine(35, -100);
+		pen.drawLine(35, 100);
+		pen.endFilledRegion();
 		
-		
-		
-		System.out.println(windowY-(flagsep*6));		
-		
-		//pen.hidePen();
+		//Hides the Pen after drawing
+		pen.hidePen();
 		
 	}
 
