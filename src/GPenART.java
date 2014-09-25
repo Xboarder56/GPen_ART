@@ -102,36 +102,24 @@ public class GPenART extends GraphicsProgram
 		pen.drawLine(startX, -348);
 		pen.endFilledRegion();
 		
-		//Tri #1 (BASE RIGHT)
+		//Cross Design #1 (Middle section going vertical)
 		pen.setFillColor(Color.WHITE);
+		pen.setColor(Color.WHITE);
 		pen.startFilledRegion();
-		pen.setLocation(350, 275);
-		pen.drawLine(-50, -80);
-		pen.drawLine(-45, 42);
+		pen.setLocation(175, 50);
+		pen.drawLine(80, 0);
+		pen.drawLine(0, 250);
+		pen.drawLine(-80, 0);
 		pen.endFilledRegion();
 		
-		//Tri #2 (BASE LEFT)
+		//Cross Design #2 (Middle section going horizontal)
 		pen.setFillColor(Color.WHITE);
+		pen.setColor(Color.WHITE);
 		pen.startFilledRegion();
-		pen.setLocation(195, 230);
-		pen.drawLine(-50, -40);
-		pen.drawLine(-80, 90);
-		pen.endFilledRegion();
-
-		//Tri #3 (BASE MIDDLE)
-		pen.setFillColor(Color.WHITE);
-		pen.startFilledRegion();
-		pen.setLocation(100, 150);
-		pen.drawLine(250, 0);
-		pen.drawLine(-125, 115);
-		pen.endFilledRegion();
-		
-		//Tri #4 (BASE TOP)
-		pen.setFillColor(Color.WHITE);
-		pen.startFilledRegion();
-		pen.setLocation(185, 150);
-		pen.drawLine(35, -100);
-		pen.drawLine(35, 100);
+		pen.setLocation(75, 137.5);
+		pen.drawLine(0, 75);
+		pen.drawLine(275, 0);
+		pen.drawLine(0, -75);
 		pen.endFilledRegion();
 		
 		//Hides the Pen after drawing
